@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   include SessionsManagement
 
+  rescue_from ActionController::RoutingError, with: :render_404
 
   before_action :set_locale
   helper_method :current_user, :logged_in?, :current_user?, :login_path
@@ -15,6 +16,10 @@ class ApplicationController < ActionController::Base
 
   def default_url_options(options={})
     { locale: I18n.locale }
+  end
+
+  def render_404
+    render file: "public/404", status: 404, layout: false, handlers: [:erb], formats: [:html]
   end
 
   protected
