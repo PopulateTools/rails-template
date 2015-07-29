@@ -21,6 +21,8 @@ RSpec.configure do |config|
   config.include(EmailSpec::Matchers)
 
   config.before(:suite) do
+    %x[bundle exec rake assets:precompile]
+
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
   end
