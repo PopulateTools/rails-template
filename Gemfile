@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'bourbon'
 gem 'turbolinks'
+gem 'therubyracer'
 
 group :development, :test do
   gem 'spring'
@@ -39,4 +40,9 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'quiet_assets'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-passenger'
 end
