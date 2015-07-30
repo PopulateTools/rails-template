@@ -7,6 +7,8 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
+# TODO
+server 'TODO: set hostname or host IP', user: 'ubuntu', roles: %w{app db web}
 
 
 # role-based syntax
