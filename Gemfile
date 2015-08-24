@@ -25,7 +25,6 @@ gem 'therubyracer'
 group :development, :test do
   gem 'spring'
   gem 'byebug'
-  gem 'jasmine'
 end
 
 group :test do
