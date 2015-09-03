@@ -12,3 +12,5 @@
 !/log/.keep
 /tmp
 public/capybara_test_assets
+config/database.yml
+config/secrets.yml
