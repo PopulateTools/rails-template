@@ -24,6 +24,7 @@ gem 'therubyracer'
 
 group :development, :test do
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'byebug'
 end
 
