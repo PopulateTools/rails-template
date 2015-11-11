@@ -4,16 +4,11 @@ gem 'rails', '4.2.4'
 gem 'pg'
 gem 'sass-rails', '~> 5.0.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'friendly_id', '~> 5.0.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'redcarpet'
 gem 'bcrypt'
 gem 'rollbar'
 gem 'meta-tags'
-gem 'dynamic_form'
-gem 'hstore_accessor'
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-gem 'acts-as-taggable-on', '~> 3.4'
+gem 'ine-places', require: 'ine/places/places'
 
 # Frontend
 gem 'jquery-rails'
@@ -21,6 +16,7 @@ gem 'jquery-turbolinks'
 gem 'bourbon'
 gem 'turbolinks'
 gem 'therubyracer'
+gem 'cookies_eu'
 
 group :development, :test do
   gem 'spring'
