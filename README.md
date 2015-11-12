@@ -11,7 +11,7 @@ ToDo
 * Turbolinks
 * Velocity http://julian.com/research/velocity/
 * jQuery Dynatable http://www.dynatable.com/
-* jQquery Sticky http://stickyjs.com/
+* jQuery Sticky http://stickyjs.com/
 * Tipsy http://onehackoranother.com/projects/jquery/tipsy/
 * Quill (Rich Text editor) http://quilljs.com/
 * Cookies_eu https://github.com/infinum/cookies_eu
