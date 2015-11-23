@@ -1,14 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.5'
 gem 'pg'
 gem 'sass-rails', '~> 5.0.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'redcarpet'
+gem 'friendly_id', '~> 5.0.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'bcrypt'
 gem 'rollbar'
 gem 'meta-tags'
-gem 'ine-places', require: 'ine/places/places'
 
 # Frontend
 gem 'jquery-rails'
