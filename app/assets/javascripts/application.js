@@ -25,5 +25,3 @@
 //= require vendor/pickadate/picker.time
 
 //= require ui
-// require menu
-//= require_tree .
