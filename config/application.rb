@@ -13,9 +13,10 @@ Bundler.require(*Rails.groups)
 
 module RailsTemplate
   class Application < Rails::Application
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    # I18n locales
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :es
+    config.i18n.available_locales = [:es, :en]
 
     config.active_record.raise_in_transactional_callbacks = true
 
@@ -29,5 +30,16 @@ module RailsTemplate
 
     # Set the default host name for emails
     # config.action_mailer.default_url_options = { host: '' }
+
+    # Autoloading
+    config.autoload_paths += [
+      "#{config.root}/lib",
+      "#{config.root}/lib/validators"
+    ]
+
+    # Sanitize tags and attributes
+    config.action_view.sanitized_allowed_tags = ['strong', 'em', 'a', 'img', 'iframe', 'p', 'ul', 'li', 'span', 'br', 'div', 'b', 'i', 's', 'ol']
+    config.action_view.sanitized_allowed_attributes = ['href', 'title', 'style', 'src']
+
   end
 end
