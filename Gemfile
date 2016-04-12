@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.5'
+gem 'rails', '4.2.6'
 gem 'pg'
 gem 'sass-rails', '~> 5.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -8,6 +8,7 @@ gem 'friendly_id', '~> 5.0.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 gem 'bcrypt'
 gem 'rollbar'
 gem 'meta-tags'
+gem 'letter_opener_web'
 
 # Frontend
 gem 'jquery-rails'
