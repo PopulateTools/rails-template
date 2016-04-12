@@ -13,7 +13,8 @@ Bundler.require(*Rails.groups)
 
 module RailsTemplate
   class Application < Rails::Application
-    # I18n locales
+    config.time_zone = 'UTC'
+
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :es
     config.i18n.available_locales = [:es, :en]
@@ -23,9 +24,12 @@ module RailsTemplate
     config.generators do |g|
       g.orm             :active_record
       g.template_engine :erb
+      g.assets          false
+      g.helper          false
+      g.routes          false
       g.test_framework  :rspec, fixtures: false, view_spec: false,
-                                helper_specs: false, routing_specs: false,
-                                controller_specs: false, request_specs: false
+        helper_specs: false, routing_specs: false,
+        controller_specs: false, request_specs: false
     end
 
     # Set the default host name for emails
@@ -36,10 +40,6 @@ module RailsTemplate
       "#{config.root}/lib",
       "#{config.root}/lib/validators"
     ]
-
-    # Sanitize tags and attributes
-    config.action_view.sanitized_allowed_tags = ['strong', 'em', 'a', 'img', 'iframe', 'p', 'ul', 'li', 'span', 'br', 'div', 'b', 'i', 's', 'ol']
-    config.action_view.sanitized_allowed_attributes = ['href', 'title', 'style', 'src']
 
   end
 end
