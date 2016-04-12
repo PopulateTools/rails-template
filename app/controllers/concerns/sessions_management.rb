@@ -1,6 +1,10 @@
 module SessionsManagement
   extend ActiveSupport::Concern
 
+  included do
+    helper_method :current_user, :logged_in?, :current_user?
+  end
+
   def logged_in?
     !!current_user
   end
@@ -24,6 +28,17 @@ module SessionsManagement
   def logged_in_user
     unless logged_in?
       redirect_to login_path and return false
+    end
+  end
+
+  def admin_user
+    unless logged_in?
+      redirect_to login_path and return false
+    end
+
+    unless current_user.admin?
+      flash[:alert] = t('controllers.sessions_managment.admin_user.alert')
+      redirect_to root_path and return false
     end
   end
 
