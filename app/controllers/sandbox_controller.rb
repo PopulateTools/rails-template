@@ -16,12 +16,11 @@ class SandboxController < ApplicationController
       else
         render "sandbox/#{params[:template]}"
       end
-      
     elsif lookup_context.exists?("sandbox/#{params[:template]}/index")
       render "sandbox/#{params[:template]}/index"
     else
       render :action => "index"
     end
   end
-  
+
 end

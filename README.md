@@ -2,10 +2,6 @@
 
 A Rails template app we use at Populate. 
 
-## Backend gems
-
-ToDo
-
 ## Front-end gems
 
 * Turbolinks

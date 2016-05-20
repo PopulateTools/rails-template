@@ -23,5 +23,6 @@
 //= require vendor/pickadate/picker
 //= require vendor/pickadate/picker.date
 //= require vendor/pickadate/picker.time
+//= require flight-for-rails
 
 //= require ui

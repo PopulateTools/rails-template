@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.6'
+gem 'rails', '~> 5.0.0.rc1'
 gem 'pg'
-gem 'sass-rails', '~> 5.0.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'friendly_id', '~> 5.0.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+gem 'sassc-rails'
+gem 'uglifier'
+gem 'friendly_id'
 gem 'bcrypt'
 gem 'rollbar'
 gem 'meta-tags'
@@ -17,6 +17,7 @@ gem 'bourbon'
 gem 'turbolinks'
 gem 'therubyracer'
 gem 'cookies_eu'
+gem 'flight-for-rails'
 
 group :development, :test do
   gem 'spring'
@@ -34,7 +35,7 @@ group :test do
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
   gem 'quiet_assets'
   gem 'capistrano'
   gem 'capistrano-rbenv'
